@@ -39,6 +39,7 @@ dependencies {
     compile group: 'org.inventivetalent', name: 'mc-wrappers', version: '1.0.3-SNAPSHOT'
     compile group: 'io.github.lukehutch', name: 'fast-classpath-scanner', version: '2.21'
     compile group: 'org.objenesis', name: 'objenesis', version: '2.6'
+    compile group: 'com.comphenix.packetwrapper', name: 'PacketWrapper', version: '1.12.1-R0.1-SNAPSHOT'
 
     compile(group: 'org.inventivetalent', name: 'menubuilder', version: '1.0.2') {
         exclude group: 'org.bukkit'
