@@ -1,5 +1,5 @@
 name: VoxelGamesLib-Dependencies
-version: @version@
+version: ${version.number}
 main: com.voxelgameslib.dependencies.Dependencies
 authors: [VoxelGamesLib]
 depend: [ProtocolLib]
