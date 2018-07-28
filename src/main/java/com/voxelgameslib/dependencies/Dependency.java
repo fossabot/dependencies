@@ -55,9 +55,9 @@ public class Dependency {
         if (o == null || getClass() != o.getClass()) return false;
         Dependency that = (Dependency) o;
         return Objects.equals(groupId, that.groupId) &&
-            Objects.equals(artifactId, that.artifactId) &&
-            Objects.equals(verion, that.verion) &&
-            Objects.equals(compileTime, that.compileTime);
+                Objects.equals(artifactId, that.artifactId) &&
+                Objects.equals(verion, that.verion) &&
+                Objects.equals(compileTime, that.compileTime);
     }
 
     @Override
@@ -69,10 +69,10 @@ public class Dependency {
     @Override
     public String toString() {
         return "Dependency{" +
-            "groupId='" + groupId + '\'' +
-            ", artifactId='" + artifactId + '\'' +
-            ", verion='" + verion + '\'' +
-            ", compileTime=" + compileTime +
-            '}';
+                "groupId='" + groupId + '\'' +
+                ", artifactId='" + artifactId + '\'' +
+                ", verion='" + verion + '\'' +
+                ", compileTime=" + compileTime +
+                '}';
     }
 }

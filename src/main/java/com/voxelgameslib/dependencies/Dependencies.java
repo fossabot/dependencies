@@ -2,18 +2,13 @@ package com.voxelgameslib.dependencies;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URISyntaxException;
 import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -39,10 +34,10 @@ public class Dependencies extends JavaPlugin {
                     properties.load(stream);
 
                     dependency = new Dependency(
-                        properties.getProperty("groupId", "undefined"),
-                        properties.getProperty("artifactId", "undefined"),
-                        properties.getProperty("artifactId", "undefined"),
-                        new Date(0));
+                            properties.getProperty("groupId", "undefined"),
+                            properties.getProperty("artifactId", "undefined"),
+                            properties.getProperty("artifactId", "undefined"),
+                            new Date(0));
 
                     dependencies.add(dependency);
                 } catch (IOException ex) {
@@ -53,10 +48,10 @@ public class Dependencies extends JavaPlugin {
 
                 try {
                     Optional<String> dateLine = Files.readAllLines(path).stream()
-                        .filter(l -> l.startsWith("#"))
-                        .filter(l -> !l.startsWith("#G"))
-                        .filter(l -> !l.startsWith("#C"))
-                        .findFirst();
+                            .filter(l -> l.startsWith("#"))
+                            .filter(l -> !l.startsWith("#G"))
+                            .filter(l -> !l.startsWith("#C"))
+                            .findFirst();
 
                     if (!dateLine.isPresent()) {
                         getLogger().warning("Couldn't figure out compile date for dependency " + dependency);
