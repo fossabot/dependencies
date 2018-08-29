@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.stream.Stream;
@@ -57,7 +58,7 @@ public class Dependencies extends JavaPlugin {
                         getLogger().warning("Couldn't figure out compile date for dependency " + dependency);
                         return;
                     }
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.ENGLISH);
                     try {
                         dependency.setCompileTime(dateFormat.parse(dateLine.get().replace("#", "")));
                     } catch (ParseException e) {
@@ -66,8 +67,8 @@ public class Dependencies extends JavaPlugin {
                     }
                 } catch (IOException ex) {
                     getLogger().warning("Error while reading compile date for dependency " + dependency);
-//                    ex.printStackTrace();
                 }
+
             });
         } catch (IOException e) {
             e.printStackTrace();
