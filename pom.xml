@@ -16,7 +16,7 @@
     <repositories>
         <repository>
             <id>paper</id>
-            <url>https://repo.destroystokyo.com/repository/maven-public/</url>
+            <url>https://destroystokyo.com/repo/repository/maven-public/</url>
         </repository>
         <repository>
             <id>aikar</id>
@@ -52,14 +52,14 @@
         <!-- compile -->
         <dependency>
             <groupId>com.destroystokyo.paper</groupId>
-            <artifactId>paper</artifactId>
+            <artifactId>paper-api</artifactId>
             <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>me.minidigger</groupId>
-            <artifactId>ChatMenuAPI</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.voxelgameslib</groupId>
+            <artifactId>chatmenuapi</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
