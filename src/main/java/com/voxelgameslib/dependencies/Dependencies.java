@@ -57,16 +57,16 @@ public class Dependencies extends JavaPlugin {
                         getLogger().warning("Couldn't figure out compile date for dependency " + dependency);
                         return;
                     }
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz YYYY");
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy");
                     try {
                         dependency.setCompileTime(dateFormat.parse(dateLine.get().replace("#", "")));
                     } catch (ParseException e) {
-                        getLogger().warning("Error while parsing compile time date " + dateLine.get().replace("#", ""));
-                        e.printStackTrace();
+                        getLogger().warning("Error while parsing compile time date " +
+                                dateLine.get().replace("#", "") + ": " + e.getClass().getName() + ": " + e.getMessage());
                     }
                 } catch (IOException ex) {
                     getLogger().warning("Error while reading compile date for dependency " + dependency);
-                    ex.printStackTrace();
+//                    ex.printStackTrace();
                 }
             });
         } catch (IOException e) {
